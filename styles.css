@@ -1,0 +1,178 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and HTML base styles */
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Main layout styles */
+main {
+    padding: 20px;
+}
+
+/* Add Product Form styles */
+.add-product-form {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 auto 30px; /* Centering the form */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Form width */
+}
+
+.add-product-form h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Form input styles */
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Inventory Section styles */
+.inventory-section {
+    margin-top: 20px;
+}
+
+.inventory-header {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Product Grid styles */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Product Card styles */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.product-card h3,
+.product-card .price {
+    padding: 0.5rem 1rem;
+}
+
+.product-card .in-stock {
+    color: green;
+}
+
+.product-card .out-of-stock {
+    color: red;
+}
+
+/* Product Card h1 styles */
+.product-card h1 {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid #ccc;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Remove button styles */
+.product-card button {
+    width: 50%;
+    background-color: #d9534f;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin: 10px 25%;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #c9302c;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .add-product-form {
+        width: 90%; /* Adjust form width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .add-product-form,
+    .inventory-section {
+        padding: 10px;
+    }
+
+    .add-product-form {
+        width: 100%; /* Full width on very small screens */
+    }
+}
